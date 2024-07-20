@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Loading Animation</title>
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!-- CSS -->
+      <!-- <link rel="stylesheet" href="style.css"> -->
+      <!-- AOS -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet /">
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <!-- Bootstrap Icon 1.10.5 -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      <!-- Font-Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" />
+      <!-- Font-Awesome-Animation -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.min.css">
+      <!-- Jquery 3.7.0 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+   <!--  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+   </head>
+   <style type="text/css">
+            body{
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+        background: black;
+      }
+      .center{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .ring{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        animation: ring 2s linear infinite;
+      }
+      @keyframes ring {
+        0%{
+          transform: rotate(0deg);
+          box-shadow: 1px 5px 2px #e65c00;
+        }
+        50%{
+          transform: rotate(180deg);
+          box-shadow: 1px 5px 2px #18b201;
+        }
+        100%{
+          transform: rotate(360deg);
+          box-shadow: 1px 5px 2px #0456c8;
+        }
+      }
+      .ring:before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(255,255,255,.3);
+      }
+      span{
+        color: #737373;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 200px;
+        animation: text 3s ease-in-out infinite;
+      }
+      @keyframes text {
+        50%{
+          color: black;
+        }
+      }
+      .mainDiv{
+         display: none;
+      }
+   </style>
+   <body>
+      <div class="loading-div center">
+         <div class="ring"></div>
+         <!-- <span>loading...</span> -->
+         <span><img src="./assets/img/loading/loading-dark.gif"></span>
+      </div>
+      <div class="mainDiv">
+         <p><img src="./assets/img/loading/loading-dark.gif"></p>
+         <p><img src="./assets/img/loading/loading-light.gif"></p>
+      </div>
+      <script type="text/javascript">
+         $(window).on('load',function(){
+             // console.log( "ready!" );
+            $(".loading-div").fadeOut(1000);
+            // $(".mainDiv").hide();
+            $(".mainDiv").hide(0).delay(1000).show(0);
+            $(".mainDiv").hide(0).delay(100).fadeIn(200);
+            // $(".mainDiv").fadeIn(1000);
+         });
+      </script>
+   </body>
+</html>

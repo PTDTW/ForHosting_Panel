@@ -1,0 +1,3 @@
+CREATE TABLE `fhp_users` (`user_id` VARCHAR(100) NULL , `user_account` VARCHAR(100) NOT NULL , `user_name` VARCHAR(100) NOT NULL , `user_password` VARCHAR(100) NOT NULL , `user_email` VARCHAR(100) NOT NULL , `user_platform` VARCHAR(100) NOT NULL , `user_coin` VARCHAR(100) NOT NULL , `user_admin` VARCHAR(100) NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `fhp_panelsetting` (`name` VARCHAR(100) NULL , `value` VARCHAR(400) NULL ) ENGINE = InnoDB;
+CREATE TABLE `fhp_oauthlogin` (`name` VARCHAR(200) NOT NULL , `client_id` VARCHAR(200) NOT NULL , `client_secret` VARCHAR(200) NOT NULL , `client_scope` VARCHAR(200) NOT NULL ,  `redirectUrl` VARCHAR(200) NOT NULL, `status` VARCHAR(200) NOT NULL) ENGINE = InnoDB;

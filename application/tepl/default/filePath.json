@@ -1,0 +1,14 @@
+{
+    "pages":{
+        "dashboard": "dashboard.php",
+        "login":"sign-in.php",
+        "accountProfile":"profile.php",
+        "createServer":"createServer.php"
+    },
+    "components":{
+        "navbarData":"components/NavigationBar.php"
+    },
+    "language":{
+        "zh_TW":"language/zh_TW.php"
+    }
+}

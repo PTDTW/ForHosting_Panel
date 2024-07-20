@@ -1,0 +1,11 @@
+{
+    "name":"default",
+    "version":"1.0.0",
+    "anthor":"FlyBirdDevelop",
+    "html":{
+        "title":"",
+        "copyright":"© FHosting Panel 2023 - 2024. All rights reserved."
+    },
+    "pathFile":"filePath.json",
+    "defaultLang": "zh_TW"
+}
